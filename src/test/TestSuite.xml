@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="false">
+<test name="Test">
+    <classes>
+        <class name="cn.zxs.mybatis.dao.impl.UserDaoImplTest">
+            <methods>
+                <include name="testQueryUserById"/>
+                <include name="testQueryUserAll"/>
+            </methods>
+        </class>
+    </classes>
+</test> <!-- Test -->
+</suite> <!-- Suite -->

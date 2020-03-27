@@ -1,3 +1,5 @@
+package cn.zxs.test.testcase;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,9 +9,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
 
 
-public class testcase {
+public class TestCase {
     private WebDriver driver;
     private String url = "https://www.baidu.com";
     private StringBuffer verificationErrors = new StringBuffer();
@@ -31,6 +34,7 @@ public class testcase {
         driver.findElement(By.id("kw")).clear();// 按id找到元素后，清空该元素
         driver.findElement(By.id("kw")).sendKeys("selenium");// 输入selenium
         driver.findElement(By.id("su")).click(); //点击搜索按钮
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @AfterMethod
