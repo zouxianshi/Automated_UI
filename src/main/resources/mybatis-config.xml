@@ -32,7 +32,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mappers/MyMapper.xml"/>
         <mapper resource="mappers/UserDaoMapper.xml"/>
     </mappers>
 </configuration>
