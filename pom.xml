@@ -63,5 +63,22 @@
 
     </dependencies>
 
+    <build>
+        <!-- 添加插件 关联testng.xml -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12.4</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <!-- testng.xml文件路径吗，项目下路径为"res/testng.xml" ，则定义为res/${xmlFileName} -->
+                        <suiteXmlFile>res\TestSuite.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
