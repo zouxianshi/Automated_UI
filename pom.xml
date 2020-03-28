@@ -73,7 +73,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <!-- testng.xml文件路径吗，项目下路径为"res/testng.xml" ，则定义为res/${xmlFileName} -->
-                        <suiteXmlFile>res\TestSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/TestSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
