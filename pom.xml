@@ -88,6 +88,12 @@
                         <!-- testng.xml文件路径吗，项目下路径为"res/testng.xml" ，则定义为res/${xmlFileName} -->
                         <suiteXmlFile>src/test/TestSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>./target/allure-results</value>
+                        </property>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
