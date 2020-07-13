@@ -19,7 +19,7 @@ public class TestCase {
 
     @BeforeMethod
     public void setUp() {
-            String browserDriverPath = "C:\\Users\\Administrator\\IdeaProjects\\Automated_UI\\src\\main\\resources\\chromedriver.exe";
+            String browserDriverPath = "src\\main\\resources\\chromedriver.exe";
             System.setProperty("webdriver.chrome.driver",browserDriverPath);
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");

@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     public void insert(User user) {
-        Long Id = Long.parseLong(maxId())+1;
+        long Id = Long.parseLong(maxId())+1;
         user.setId(Long.toString(Id));
         sqlSession.insert("UserDao.insert",user);
     }

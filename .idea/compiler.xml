@@ -9,5 +9,6 @@
         <module name="Automated_UI" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
