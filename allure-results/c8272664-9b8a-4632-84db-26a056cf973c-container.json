@@ -1,1 +1,0 @@
-{"uuid":"c8272664-9b8a-4632-84db-26a056cf973c","name":"cn.hydee.webui.testcase.TestCase.tearDown","description":"","start":1595216730977,"stop":1595216731545,"children":["a33218fe-a76f-4b85-9533-e3ea02dac63a"],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","start":1595216730978,"stop":1595216731545}]}
