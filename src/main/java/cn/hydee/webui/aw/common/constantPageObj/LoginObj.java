@@ -5,9 +5,10 @@ package cn.hydee.webui.aw.common.constantPageObj;
  */
 
 public  class LoginObj {
+
 //    用户名输入框
     public static String userName_Xpath = "//*[@id=\"app\"]//input[@placeholder=\"请输入用户名\"]";
-    //*[@id="app"]/div/div/div/div/div/div/form/div[1]/div/div/input
+
 //    密码输入框
     public static String pwd_Xpath = "//*[@id=\"app\"]//input[@placeholder=\"请输入密码\"]";
 

@@ -21,5 +21,6 @@ public class TestCase {
 
     @AfterMethod
     public void tearDown(){
+        BaseComponent.exit();
     }
 }

@@ -1,5 +1,6 @@
 package cn.hydee.webui.control.basecomponent;
 
+import cn.hydee.webui.aw.common.constantPageObj.LoginObj;
 import cn.hydee.webui.control.driver.ChromeDriverGenerator;
 import junit.framework.Assert;
 
@@ -45,7 +46,7 @@ public class BaseComponent {
 	/**
 	 * @description : 等待指定时间长度
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : int time
 	 * @return :
 	 */
@@ -56,7 +57,7 @@ public class BaseComponent {
 	/**
 	 * @description : 查找元素
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : ElementType type 元素类型 String value 元素查找表达式
 	 * @return : WebElement element, null
 	 * @throws : Exception
@@ -85,7 +86,7 @@ public class BaseComponent {
 	/**
 	 * @description : 查找元素列表
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : ElementType type 元素类型 String value 元素查找表达式
 	 * @return : List<WebElement>, 元素列表or null
 	 * @throws Exception
@@ -114,7 +115,7 @@ public class BaseComponent {
 	/**
 	 * @description : 等待元素展示
 	 * @author : zouxianshi
-	 * @date : 2020年8月1日
+	 * @date : 2020/7/18
 	 * @parameter : final WebElement element
 	 * @return : Boolean ret
 	 */
@@ -140,7 +141,7 @@ public class BaseComponent {
 	/**
 	 * @description : 获取by对象
 	 * @author : zouxianshi
-	 * @date : 2020年7月31日
+	 * @date : 2020/7/18
 	 * @parameter : ElementType type 元素类型 String value 元素查找表达式
 	 * @return : By
 	 */
@@ -178,7 +179,7 @@ public class BaseComponent {
 	/**
 	 * @description : 模拟输入值
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : WebElement element String keys
 	 * @return
 	 * @throws Exception
@@ -196,7 +197,7 @@ public class BaseComponent {
 	/**
 	 * @description : 模拟输入值键盘操作
 	 * @author : zouxianshi
-	 * @date : 2019年1月8日
+	 * @date : 2020/7/18
 	 * @parameter : WebElement element Keys
 	 * @return :
 	 * @throws Exception
@@ -214,7 +215,7 @@ public class BaseComponent {
 	/**
 	 * @description : 单击
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : WebElement element
 	 * @return :
 	 * @throws Exception
@@ -238,7 +239,7 @@ public class BaseComponent {
 	/**
 	 * @description : 选择select
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : WebElement element
 	 * @return :
 	 * @throws Exception
@@ -268,7 +269,7 @@ public class BaseComponent {
 	/**
 	 * @description : 检查元素中是否包含指定数据
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : WebElement element, String value
 	 * @return :
 	 * @throws Exception
@@ -290,7 +291,7 @@ public class BaseComponent {
 	/**
 	 * @description : 检查元素是否不可见
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : WebElement element
 	 * @return :
 	 * @throws Exception
@@ -314,9 +315,8 @@ public class BaseComponent {
 	/**
 	 * @description : 切换frame
 	 * @author : zouxianshi
-	 * @date : 2020年7月20日
+	 * @date : 2020/7/18
 	 * @parameter : WebElement element
-	 * @return :
 	 * @throws Exception
 	 */
 	public static void switchToFrame(WebElement element){
@@ -334,8 +334,7 @@ public class BaseComponent {
 	 * @author : zouxianshi
 	 * @date : 2020年7月20日
 	 * @parameter : WebElement element
-	 * @return :
-	 * @throws Exception
+	 * @throws: Exception
 	 */
 	public static void clearElement(WebElement element) throws Exception {
 		try {
@@ -352,8 +351,7 @@ public class BaseComponent {
 	 * @author : zouxianshi
 	 * @date : 2020年7月20日
 	 * @parameter : WebElement element
-	 * @return :
-	 * @throws Exception
+	 * @throws: Exception
 	 */
 	public static void switchToDefault() throws Exception {
 		try {
@@ -386,7 +384,6 @@ public class BaseComponent {
 	 * @author : zouxianshi
 	 * @date : 2020年7月20日
 	 * @parameter : WebElement element
-	 * @return :
 	 * @throws Exception
 	 */
 	public static void actionMoveToElement(WebElement element) throws Exception {
@@ -408,7 +405,6 @@ public class BaseComponent {
 	 * @author : zouxianshi
 	 * @date : 2020年7月20日
 	 * @parameter : WebElement element
-	 * @return :
 	 * @throws Exception
 	 */
 	public static void actionDoubleClick(WebElement element) throws Exception {
@@ -430,7 +426,6 @@ public class BaseComponent {
 	 * @author : zouxianshi
 	 * @date : 2020年7月20日
 	 * @parameter : WebElement element
-	 * @return :
 	 * @throws Exception
 	 */
 	public static void moveToElementByJs(WebElement element) throws Exception {
@@ -496,7 +491,7 @@ public class BaseComponent {
 	/**
 	 * @description: 判断元素是否存在
 	 * @author zouxianshi
-	 * @date 2019-01-07
+	 * @date 2020/7/18
 	 * @param type ElementType type 元素类型 String value 元素查找表达式
 	 * @param value, type的value
 	 */
@@ -535,11 +530,19 @@ public class BaseComponent {
 	}
 	
 	/**
+	 * @author: zouxianshi
 	 * @description: 回车操作
 	 */
 	public static void actionEnter(){
 		Actions actions=new Actions(driver);
 		actions.sendKeys(Keys.ENTER).perform();
 	}
-	
+
+	/**
+	 * @author: zouxianshi
+	 * @description 退出chrome
+	 */
+	public static void exit(){
+		ChromeDriverGenerator.quitDriver(driver);
+	}
 }
