@@ -1,1 +1,0 @@
-{"uuid":"04af2ee9-167c-4830-9c11-ca19e4ed8293","name":"cn.zxs.mybatis.dao.impl.UserDaoImplTest.setUp","description":"","start":1594649662095,"stop":1594649662111,"children":["dab6e7be-2bd2-4f1f-970c-1f08d75b215e"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","start":1594649662095,"stop":1594649662111}]}

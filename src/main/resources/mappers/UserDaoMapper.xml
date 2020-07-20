@@ -7,7 +7,7 @@
     <!-- statement，内容：sql语句。id：唯一标识，随便写，在同一个命名空间下保持唯一
       resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
     -->
-    <select id="queryUserById" resultType="cn.zxs.mybatis.pojo.User">
+    <select id="queryUserById" resultType="mybatis.pojo.User">
       select
        tuser.id as id,
        tuser.userName as userName,
@@ -23,11 +23,11 @@
        where tuser.id = #{id};
    </select>
 
-    <select id="queryUserAll" resultType="cn.zxs.mybatis.pojo.User">
+    <select id="queryUserAll" resultType="mybatis.pojo.User">
         select * from tb_user;
     </select>
 
-    <insert id="insert" parameterType="cn.zxs.mybatis.pojo.User">
+    <insert id="insert" parameterType="mybatis.pojo.User">
          INSERT INTO tb_user (
         id,
         userName,
@@ -53,7 +53,7 @@
         );
     </insert>
     
-    <update id="update" parameterType="cn.zxs.mybatis.pojo.User">
+    <update id="update" parameterType="mybatis.pojo.User">
         UPDATE tb_user
         <trim prefix="set" suffixOverrides=",">
             <if test="userName!=null">userName = #{userName},</if>

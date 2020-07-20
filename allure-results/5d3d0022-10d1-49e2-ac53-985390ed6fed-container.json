@@ -1,0 +1,1 @@
+{"uuid":"5d3d0022-10d1-49e2-ac53-985390ed6fed","name":"cn.hydee.webui.testcase.TestCase.setUp","description":"","start":1595226084633,"stop":1595226084638,"children":["b12c1724-8851-4c14-b364-0eb60c433b76"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","start":1595226084633,"stop":1595226084638}]}

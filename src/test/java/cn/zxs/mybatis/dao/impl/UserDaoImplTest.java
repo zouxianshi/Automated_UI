@@ -1,7 +1,8 @@
 package cn.zxs.mybatis.dao.impl;
 
-import cn.zxs.mybatis.dao.UserDao;
-import cn.zxs.mybatis.pojo.User;
+import mybatis.dao.UserDao;
+import mybatis.dao.impl.UserDaoImpl;
+import mybatis.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
