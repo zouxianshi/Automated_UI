@@ -1,17 +1,15 @@
 package cn.hydee.webui.control.driver;
 
 import cn.hydee.webui.control.basecomponent.Constant;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.openqa.selenium.Dimension;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Properties;
 
+@Slf4j
 public class ChromeDriverGenerator {
-    private static Logger logger = LogManager.getLogger(ChromeDriverGenerator.class);
 
     /**
      * @author zouxianshi
@@ -20,12 +18,13 @@ public class ChromeDriverGenerator {
      * @return WebDriver
      */
     public static WebDriver getDriver(){
-        logger.info("Chrome driver start begin.");
-        WebDriver webDriver = null;
+        log.info("Chrome driver start begin.");
+//        WebDriver webDriver = null;
         Properties props = System.getProperties();
         String osName = props.getProperty("os.name");
         ChromeOptions options = new ChromeOptions();
 
+        WebDriver webDriver = null;
         try{
             //windows操作系统
             if(osName.contains(Constant.OS_WIN)){
@@ -37,17 +36,17 @@ public class ChromeDriverGenerator {
             //设置Chrome静默模式
 			options.addArguments(Constant.CHROME_SILENCE_MODE);
             //最大化窗口
-//			options.addArguments(Constant.CHROME_MAX_WINDOW);
+			options.addArguments(Constant.CHROME_MAX_WINDOW);
             //设置忽略并能正常打开不安全的页面
             options.setAcceptInsecureCerts(true);
-            webDriver = new ChromeDriver(options);
             //自定义浏览器窗口大小
 //            webDriver.manage().window().setSize(new Dimension(Constant.DIMENSION_FULLSCREEN_X,
 //                    Constant.DIMENSION_FULLSCREEN_Y));
         }catch (Exception e){
-            logger.error("Chrome driver start failed.", e);
+            log.error("Chrome driver start failed.", e);
         }
-        logger.info("Chrome driver start end.");
+        webDriver = new ChromeDriver(options);
+        log.info("Chrome driver start end.");
         return webDriver;
     }
 
@@ -59,10 +58,10 @@ public class ChromeDriverGenerator {
      */
     public static void quitDriver(WebDriver driver){
         try {
-            logger.info("Chrome driver quit.");
+            log.info("Chrome driver quit.");
             driver.quit();
         } catch (Exception e) {
-            logger.error("Chrome driver quit failed.", e);
+            log.error("Chrome driver quit failed.", e);
         }
     }
 

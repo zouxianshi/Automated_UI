@@ -6,9 +6,9 @@
     <properties>
         <property name="driver" value="com.mysql.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://49.233.207.137:3307/ssmdemo?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true"/>
+                  value="jdbc:mysql://49.233.207.137:3306/surfshark?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true"/>
         <property name="username" value="root"/>
-        <property name="password" value="silvercrow@6133"/>
+        <property name="password" value="silvercrow6133"/>
     </properties>
 
     <settings>
@@ -33,5 +33,6 @@
     </environments>
     <mappers>
         <mapper resource="mappers/UserDaoMapper.xml"/>
+        <mapper resource="mappers/SurfSharkInfoMapper.xml"/>
     </mappers>
 </configuration>

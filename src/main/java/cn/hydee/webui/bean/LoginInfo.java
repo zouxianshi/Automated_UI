@@ -8,6 +8,7 @@ public class LoginInfo {
     private String pwd;
     private WebDriver webDriver;
 
+
     public String getUrl() {
         return url;
     }

@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 
 public class TestCase {
-    private final String url = "https://middle.test.ydjia.cn/merchant/#/login";
     @BeforeMethod
-    public void setUp() throws Exception {
+    public void setUp() {
+        String url = "https://middle.test.ydjia.cn/merchant/#/login";
         BaseComponent.getUrl(url);
     }
 

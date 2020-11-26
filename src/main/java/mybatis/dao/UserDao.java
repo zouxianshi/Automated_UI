@@ -10,30 +10,30 @@ public interface UserDao {
      * @param id
      * @return
      */
-    public User queryUserById(String id);
+    User queryUserById(String id);
 
     /**
      * 查询全部
      * @return
      */
-    public List<User> queryUserAll();
+    List<User> queryUserAll();
 
     /**
      * 新增记录
      * @param user
      */
-    public void insert(User user);
+    void insert(User user);
 
     /**
      * 删除记录
      * @param id
      */
-    public void delete(String id);
+    void delete(String id);
 
     /**
      * 更新记录
      * @param user
      */
-    public void update(User user);
+    void update(User user);
 
 }
