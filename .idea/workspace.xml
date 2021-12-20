@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -32,25 +35,49 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd12e204-b5e6-4bff-abb6-50b80aefb20e" name="默认更改列表" comment="增加框架" />
+    <list default="true" id="bd12e204-b5e6-4bff-abb6-50b80aefb20e" name="默认更改列表" comment="增加框架">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/AW/cfs/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/AW/cfs/TemplateNew.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/AW/cfs/constantPageObj/LoginObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/AW/cfs/constantPageObj/MainPageObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/AW/cfs/constantPageObj/TemplateNewObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/AW/cfs/constantPageObj/TemplateObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__Arquillian_TestNG_Release.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__Arquillian_TestNG_Release.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/aw/common/constantPageObj/LoginObj.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/aw/common/login/LoginAW.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/bean/LoginInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/entity/LoginInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/control/basecomponent/BaseComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/control/baseComponent/BaseComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/control/basecomponent/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/control/baseComponent/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/control/basecomponent/ElementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/control/baseComponent/ET.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/control/driver/ChromeDriverGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/control/driver/ChromeDriverGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/dao/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hydee/webui/testcase/TestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/crow/webui/testcase/TestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/dao/SurfSharkInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/dao/impl/SurfSharkInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/dao/impl/UserDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/pojo/SurfSharkInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/pojo/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SurfSharkInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserDaoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/zxs/mybatis/dao/impl/UserDaoImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mybatis/dao/impl/SurfSharkInfoServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chromedriver.exe" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,35 +93,56 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\mvnrepository" />
-        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="mavenHome" value="D:/apache-maven-3.8.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.8.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadSourcesAutomatically" value="true" />
-        <option name="jdkForImporter" value="14" />
-        <option name="vmOptionsForImporter" value="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
     <option name="delegateBuildToMaven" value="true" />
     <option name="skipTests" value="true" />
+    <option name="vmOptions" value="-Dfile.encoding=UTF-8" />
   </component>
   <component name="ProjectId" id="1ed8mJg6kzNjIgWz6rqYSxg8KOm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -103,6 +151,12 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -113,37 +167,31 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="ignore.preview.features.used" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex-private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/main/resources/chromedriver.exe" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/web" />
   </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="Auto1.0" />
+    </force-push-targets>
+  </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="cn.zxs.mybatis.dao.impl" />
-      <recent name="cn.zxs.mybatis.dao" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\crow\IdeaProjects\Automated_UI\src\main\resources" />
       <recent name="C:\Users\10147\IdeaProjects\Automated_UI\src\main\java" />
       <recent name="C:\Users\silvercrow\IdeaProjects\Automated_UI\src\main\resources" />
       <recent name="C:\Users\Administrator\IdeaProjects\Automated_UI\src\main\resources" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.hydee.webui.common" />
-      <recent name="cn.hydee.webui.common.DBConnection" />
-      <recent name="cn.hydee.webui.common.listener" />
-      <recent name="cn.hydee.webui.control.BasicOpreation" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\10147\IdeaProjects\Automated_UI\src\test\java" />
@@ -152,19 +200,62 @@
       <recent name="C:\Users\Administrator\IdeaProjects\Automated_UI\src\main" />
       <recent name="C:\Users\Administrator\IdeaProjects\Automated_UI" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.zxs.mybatis.dao.impl" />
+      <recent name="cn.zxs.mybatis.dao" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.hydee.webui.common" />
+      <recent name="cn.hydee.webui.common.DBConnection" />
+      <recent name="cn.hydee.webui.common.listener" />
+      <recent name="cn.hydee.webui.control.BasicOpreation" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn idea:module" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestCase (1)">
-    <configuration name="C:/Users/Administrator/IdeaProjects/Automated_UI/src/main/TestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.TemplateNew">
+    <configuration name="MainPageObj" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.crow.webui.AW.cfs.constantPageObj.MainPageObj" />
       <module name="Automated_UI" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/TestSuite.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
+      <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.crow.webui.AW.cfs.constantPageObj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TemplateNew" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.crow.webui.AW.cfs.TemplateNew" />
+      <module name="Automated_UI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.crow.webui.AW.cfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Automated_UI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.crow.webui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.crow.webui.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,7 +270,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCase (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCase.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Automated_UI" />
       <extension name="coverage">
         <pattern>
@@ -189,57 +280,32 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.hydee.webui.testcase" />
       <option name="MAIN_CLASS_NAME" value="cn.hydee.webui.testcase.TestCase" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCase" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Automated_UI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zxs.test.testcase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.zxs.test.testcase" />
-      <option name="MAIN_CLASS_NAME" value="cn.zxs.test.testcase.TestCase" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoImplTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Automated_UI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zxs.mybatis.dao.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.zxs.mybatis.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="cn.zxs.mybatis.dao.impl.UserDaoImplTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.MainPageObj" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="TestNG.C:/Users/Administrator/IdeaProjects/Automated_UI/src/test/TestSuite.xml" />
+      <item itemvalue="TestNG.TestCase.testLogin" />
+      <item itemvalue="Application.TemplateNew" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestCase (1)" />
-        <item itemvalue="TestNG.TestCase" />
-        <item itemvalue="TestNG.UserDaoImplTest" />
+        <item itemvalue="Application.TemplateNew" />
+        <item itemvalue="Application.MainPageObj" />
+        <item itemvalue="Spring Boot.Application" />
         <item itemvalue="TestNG.C:/Users/Administrator/IdeaProjects/Automated_UI/src/test/TestSuite.xml" />
-        <item itemvalue="TestNG.C:/Users/Administrator/IdeaProjects/Automated_UI/src/main/TestSuite.xml" />
+        <item itemvalue="TestNG.TestCase.testLogin" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\silvercrow\AppData\Roaming\Subversion</configuration>
   </component>
@@ -296,6 +362,34 @@
       <workItem from="1594864005186" duration="10540000" />
       <workItem from="1594949841222" duration="15588000" />
       <workItem from="1595036795462" duration="21636000" />
+      <workItem from="1635217270222" duration="377000" />
+      <workItem from="1635217671351" duration="493000" />
+      <workItem from="1635306525698" duration="3476000" />
+      <workItem from="1635317587716" duration="1316000" />
+      <workItem from="1635319022969" duration="3699000" />
+      <workItem from="1635383924319" duration="4529000" />
+      <workItem from="1636446914113" duration="238000" />
+      <workItem from="1639713340394" duration="1101000" />
+      <workItem from="1639726486218" duration="43000" />
+      <workItem from="1639726564239" duration="11000" />
+      <workItem from="1639726592107" duration="2684000" />
+      <workItem from="1639729406218" duration="1152000" />
+      <workItem from="1639730797211" duration="2192000" />
+      <workItem from="1639733104542" duration="1655000" />
+      <workItem from="1639963321681" duration="964000" />
+      <workItem from="1639965382966" duration="12058000" />
+      <workItem from="1639986367497" duration="723000" />
+      <workItem from="1639987190292" duration="170000" />
+      <workItem from="1639987379291" duration="67000" />
+      <workItem from="1639987460139" duration="130000" />
+      <workItem from="1639987604508" duration="106000" />
+      <workItem from="1639987723957" duration="123000" />
+      <workItem from="1639987860780" duration="161000" />
+      <workItem from="1639988035352" duration="204000" />
+      <workItem from="1639988363769" duration="985000" />
+      <workItem from="1639989397108" duration="866000" />
+      <workItem from="1639990363936" duration="20000" />
+      <workItem from="1639990393720" duration="6515000" />
     </task>
     <task id="LOCAL-00001" summary="mybatis">
       <created>1585317572700</created>
@@ -455,7 +549,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -467,7 +561,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -480,129 +573,5 @@
     <MESSAGE value="hydee改" />
     <MESSAGE value="增加框架" />
     <option name="LAST_COMMIT_MESSAGE" value="增加框架" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="395" y="91" key="#Inspections" timestamp="1594966596271">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1594966596271" />
-    <state x="379" y="0" key="#Project_Structure" timestamp="1594889287416">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="379" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1594889287416" />
-    <state x="505" y="131" key="#Project_Structure/0.0.2048.1112@0.0.2048.1112" timestamp="1594641760315" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595217068467">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595217068467" />
-    <state x="554" y="265" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594886266500">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="554" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1594886266500" />
-    <state x="738" y="357" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1594648622825" />
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1594966550929">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594966550929" />
-    <state x="388" y="90" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1594975649056">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="388" y="90" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1594975649056" />
-    <state x="396" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1594957739748">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="396" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1594957739748" />
-    <state x="548" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1594889276296">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="548" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1594889276296" />
-    <state x="481" y="262" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1594884527657">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="481" y="262" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1594884527657" />
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1595239311028">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595239311028" />
-    <state x="604" y="230" key="FileChooserDialogImpl" timestamp="1595239269899">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="604" y="230" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595239269899" />
-    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1594642835952" />
-    <state x="625" y="310" width="285" height="296" key="Github.ShareDialog" timestamp="1595239260559">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="625" y="310" width="285" height="296" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1595239260559" />
-    <state width="1493" height="230" key="GridCell.Tab.0.bottom" timestamp="1595239332342">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="230" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595239332342" />
-    <state width="2005" height="376" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1594654121919" />
-    <state width="1493" height="230" key="GridCell.Tab.0.center" timestamp="1595239332341">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="230" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595239332341" />
-    <state width="2005" height="376" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1594654121919" />
-    <state width="1493" height="230" key="GridCell.Tab.0.left" timestamp="1595239332341">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="230" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595239332341" />
-    <state width="2005" height="376" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1594654121919" />
-    <state width="1493" height="230" key="GridCell.Tab.0.right" timestamp="1595239332341">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="230" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595239332341" />
-    <state width="2005" height="376" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1594654121919" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1595226018385">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595226018385" />
-    <state width="2005" height="376" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1594654121919" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1595226018385">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595226018385" />
-    <state width="2005" height="376" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1594654121919" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1595226018385">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595226018385" />
-    <state width="2005" height="376" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1594654121919" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1595226018385">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595226018385" />
-    <state width="2005" height="376" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1594654121919" />
-    <state x="416" y="135" key="Maven.ArtifactSearchDialog" timestamp="1595229405209">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="416" y="135" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1595229405209" />
-    <state x="555" y="211" key="Maven.ArtifactSearchDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1594644102848" />
-    <state x="64" y="0" key="SettingsEditor" timestamp="1594884698581">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="64" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594884698581" />
-    <state x="526" y="201" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1594649268963" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1595239318928">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595239318928" />
-    <state x="631" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594694790250">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="631" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1594694790250" />
-    <state x="614" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594711664615">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="614" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1594711664615" />
-    <state x="819" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1594644453436" />
-    <state x="470" y="0" width="600" height="824" key="find.popup" timestamp="1594976260282">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="470" y="0" width="600" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1594976260282" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1594958459520">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1594958459520" />
   </component>
 </project>
