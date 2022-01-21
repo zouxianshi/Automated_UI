@@ -2,9 +2,16 @@ package cn.crow.webui.AW.cfs;
 
 import cn.crow.webui.AW.cfs.constantPageObj.LoginObj;
 import cn.crow.webui.control.baseComponent.BaseComponent;
+import cn.crow.webui.control.baseComponent.ET;
+import cn.crow.webui.control.baseComponent.BaseComponent;
 import lombok.extern.log4j.Log4j2;
 
-/**0
+import javax.swing.plaf.synth.SynthTextAreaUI;
+import java.util.Arrays;
+
+/**
+ * 0
+ *
  * @author zouxianshi
  * @description 登录AW类
  * @date 2020.7.17
@@ -12,26 +19,27 @@ import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 public class Login {
+    static BaseComponent baseComponent = new BaseComponent();
 
     public static void login(String username, String pwd) throws Exception {
         try {
             log.info("开始登陆");
-            BaseComponent.getUrl("https://ucfs.med.gzhc365.com/merchant/#/login");
-            BaseComponent.findElement(LoginObj.userName_Xpath).clear();
-            BaseComponent.findElement(LoginObj.userName_Xpath).sendKeys(username);
-            BaseComponent.findElement(LoginObj.pwd_Xpath).sendKeys(pwd);
-            BaseComponent.findElement(LoginObj.valiCode_Xpath).sendKeys("12hc#$");
-            BaseComponent.findElement(LoginObj.button_Xpath).click();
-            BaseComponent.findElement(LoginObj.cgr_Xpath).click();
-            log.info(BaseComponent.alert());
-            BaseComponent.screenShot();
-        }catch (Exception e){
+            baseComponent.getUrl("https://ucfs.med.gzhc365.com/merchant/#/login");
+            baseComponent.findElement(LoginObj.userName_Xpath).clear();
+            baseComponent.findElement(LoginObj.userName_Xpath).sendKeys(username);
+            baseComponent.findElement(LoginObj.pwd_Xpath).sendKeys(pwd);
+            baseComponent.findElement(LoginObj.valiCode_Xpath).sendKeys("12hc#$");
+            baseComponent.findElement(LoginObj.button_Xpath).click();
+            baseComponent.findElement(LoginObj.cgr_Xpath).click();
+            log.info(baseComponent.alert());
+            baseComponent.screenShot();
+        } catch (Exception e) {
             log.error(e);
         }
     }
 
     public static void main(String[] args) throws Exception {
-        login("18800000001","Yy@1234589");
+        login("18774388904", "Silvercrow@6133");
     }
 }
 

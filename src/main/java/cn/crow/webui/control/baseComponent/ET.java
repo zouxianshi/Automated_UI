@@ -9,7 +9,6 @@ import lombok.Getter;
  */
 @Getter
 public enum ET {
-
 	Id,
 	Name,
 	ClassName,
@@ -17,6 +16,5 @@ public enum ET {
 	CssSelector,
 	TagName,
 	LinkText,
-	PartialLinkText,
-
+	PartialLinkText;
 }

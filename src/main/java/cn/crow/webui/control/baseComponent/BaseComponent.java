@@ -24,9 +24,21 @@ import java.util.concurrent.TimeUnit;
  * @description: 基础控件管理类
  */
 @Log4j2
-public class BaseComponent {
+public class BaseComponent extends Thread {
 
     static WebDriver driver = ChromeDriverGenerator.getDriver();
+    private ET type;
+    private String value;
+    WebElement webElement;
+
+    public void tv(ET type, String value) {
+        this.type = type;
+        this.value = value;
+    }
+
+    public void setWebElement(WebElement element){
+        this.webElement = element;
+    }
 
     /**
      * @return : Boolean ret: true or false
@@ -36,7 +48,7 @@ public class BaseComponent {
      * @parameter : String url
      */
 
-    public static void getUrl(String url) {
+    public void getUrl(String url) {
         try {
             driver.manage().window().maximize();
             driver.get(url);
@@ -55,7 +67,7 @@ public class BaseComponent {
      * @parameter : int time
      */
 
-    public static void waitTime(long time) {
+    public void waitTime(long time) {
         driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
     }
 
@@ -67,24 +79,30 @@ public class BaseComponent {
      * @date : 2020/7/18
      * @parameter : ElementType type 元素类型 String value 元素查找表达式
      */
-    public static WebElement findElement(String value) throws Exception {
-        WebElement element;
-        // 获取查找元素by对象
-        By by = getBy(ET.Xpath, value);
-        try {
-            // 查找元素显式等待指定时间，内部类实现查找元素并等待
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
-            element = wait.until((ExpectedCondition<WebElement>) driver -> driver.findElement(by));
 
-        } catch (Exception e) {
-            String errStr = String.format("Find element by type %s failed. %s ", ET.Xpath, value);
-            log.error(errStr, e);
-            throw e;
+
+    public WebElement findElement(String value) throws Exception {
+        ET[] etarr = ET.values();
+        for (ET et : etarr) {
+            BaseComponent baseComponent = new BaseComponent();
+            baseComponent.tv(et, value);
+            Thread thread = new Thread(baseComponent);
+            thread.start();
         }
-        return element;
+        return webElement;
     }
 
-    public static WebElement findElementBy(ET type, String value) throws Exception {
+    public void run() {
+        final By by = getBy(type, value);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
+        WebElement element = wait.until((ExpectedCondition<WebElement>) driver -> driver.findElement(by));
+        if (element != null){
+            setWebElement(element);
+        }
+    }
+
+
+    public WebElement findElementBy(ET type, String value) throws Exception {
         WebElement element;
         // 获取查找元素by对象
         final By by = getBy(type, value);
@@ -109,7 +127,7 @@ public class BaseComponent {
      * @parameter : ElementType type 元素类型 String value 元素查找表达式
      */
 
-    public static List<WebElement> findElementsBy(ET type, String value) {
+    public List<WebElement> findElementsBy(ET type, String value) {
         List<WebElement> elements;
         // 获取查找元素by对象
         final By by = getBy(type, value);
@@ -117,7 +135,6 @@ public class BaseComponent {
             // 查找元素显式等待指定时间，内部类实现查找元素并等待
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
             elements = wait.until((ExpectedCondition<List<WebElement>>) driver -> driver.findElements(by));
-            // wait.until(ExpectedConditions.elementToBeClickable(by));
         } catch (Exception e) {
             String errStr = String.format("Find elements by type %s failed. %s ", type, value);
             log.error(errStr, e);
@@ -134,7 +151,7 @@ public class BaseComponent {
      * @parameter : final WebElement element
      */
 
-    private static Boolean waitElementDisplayed(final WebElement element) {
+    private Boolean waitElementDisplayed(final WebElement element) {
         Boolean ret = false;
         if (element == null)
             return ret;
@@ -157,7 +174,7 @@ public class BaseComponent {
      * @parameter : ElementType type 元素类型 String value 元素查找表达式
      */
 
-    private static By getBy(ET type, String value) {
+    private By getBy(ET type, String value) {
         By by = null;
         switch (type) {
             case Id:
@@ -196,7 +213,7 @@ public class BaseComponent {
      * @parameter : WebElement element String keys
      */
 
-    public static void sendKeys(WebElement element, String keys) {
+    public void sendKeys(WebElement element, String keys) {
         try {
             element.sendKeys(keys);
         } catch (Exception e) {
@@ -214,7 +231,7 @@ public class BaseComponent {
      * @parameter : WebElement element Keys
      */
 
-    public static void sendKeys(WebElement element, Keys keys) {
+    public void sendKeys(WebElement element, Keys keys) {
         try {
             element.sendKeys(keys);
         } catch (Exception e) {
@@ -233,7 +250,7 @@ public class BaseComponent {
      * @parameter : WebElement element
      */
 
-    public static void click(WebElement element) throws Exception {
+    public void click(WebElement element) throws Exception {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
             // 等待元素显示
@@ -258,19 +275,13 @@ public class BaseComponent {
      * @parameter : WebElement element
      */
 
-    public static void select(final WebElement element) throws Exception {
+    public void select(final WebElement element) throws Exception {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
             // 等待元素显示
             if (waitElementDisplayed(element)) {
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 wait.until(ExpectedConditions.elementToBeSelected(element));
-                // wait.until(new ExpectedCondition<Boolean>(){
-                // public Boolean apply(WebDriver driver) {
-                // element.click();
-                // return true;
-                // }
-                // });
                 element.click();
             }
         } catch (Exception e) {
@@ -289,7 +300,7 @@ public class BaseComponent {
      * @parameter : WebElement element, String value
      */
 
-    public static void checkElementValue(WebElement element, String text) throws Exception {
+    public void checkElementValue(WebElement element, String text) throws Exception {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
             // 等待元素显示
@@ -312,7 +323,7 @@ public class BaseComponent {
      * @parameter : WebElement element
      */
 
-    public static void checkElementNotDiplay(final WebElement element) throws Exception {
+    public void checkElementNotDiplay(final WebElement element) throws Exception {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
             // 等待元素不显示
@@ -336,7 +347,7 @@ public class BaseComponent {
      * @parameter : WebElement element
      */
 
-    public static void switchToFrame(WebElement element) {
+    public void switchToFrame(WebElement element) {
         try {
             driver.switchTo().frame(element);
         } catch (Exception e) {
@@ -354,7 +365,7 @@ public class BaseComponent {
      * @throws: Exception
      */
 
-    public static void clearElement(WebElement element) throws Exception {
+    public void clearElement(WebElement element) throws Exception {
         try {
             element.clear();
         } catch (Exception e) {
@@ -372,7 +383,7 @@ public class BaseComponent {
      * @throws: Exception
      */
 
-    public static void switchToDefault() throws Exception {
+    public void switchToDefault() throws Exception {
         try {
             driver.switchTo().defaultContent();
         } catch (Exception e) {
@@ -389,7 +400,7 @@ public class BaseComponent {
      * @parameter : String url 跳转的目标url
      */
 
-    public static void navigateToUrl(String url) throws Exception {
+    public void navigateToUrl(String url) throws Exception {
         try {
             driver.navigate().to(url);
         } catch (Exception e) {
@@ -407,7 +418,7 @@ public class BaseComponent {
      * @parameter : WebElement element
      */
 
-    public static void actionMoveToElement(WebElement element) throws Exception {
+    public void actionMoveToElement(WebElement element) throws Exception {
         try {
             // 等待元素显示
             if (waitElementDisplayed(element)) {
@@ -429,7 +440,7 @@ public class BaseComponent {
      * @parameter : WebElement element
      */
 
-    public static void actionDoubleClick(WebElement element) throws Exception {
+    public void actionDoubleClick(WebElement element) throws Exception {
         try {
             // 等待元素显示
             if (waitElementDisplayed(element)) {
@@ -451,7 +462,7 @@ public class BaseComponent {
      * @parameter : WebElement element
      */
 
-    public static void moveToElementByJs(WebElement element) throws Exception {
+    public void moveToElementByJs(WebElement element) throws Exception {
         try {
             // 等待元素显示
             if (waitElementDisplayed(element)) {
@@ -473,7 +484,7 @@ public class BaseComponent {
      * @parameter : WebDriver webdriver
      */
 
-    public static void setDriver(WebDriver webdriver) {
+    public void setDriver(WebDriver webdriver) {
         driver = webdriver;
     }
 
@@ -487,7 +498,7 @@ public class BaseComponent {
      */
 
 
-    public static void waitForLoadingEleDisappear(ET type, String value, long maxWaitTimeout) {
+    public void waitForLoadingEleDisappear(ET type, String value, long maxWaitTimeout) {
         // 获取查找元素by对象
         waitTime(1000);
         final By by = getBy(type, value);
@@ -523,7 +534,7 @@ public class BaseComponent {
      * @date 2020/7/18
      */
 
-    public static Boolean checkElementIsExisted(ET type, String value) throws Exception {
+    public Boolean checkElementIsExisted(ET type, String value) throws Exception {
         // 获取查找元素by对象
         waitTime(1);
         final By by = getBy(type, value);
@@ -542,7 +553,7 @@ public class BaseComponent {
      * @date 2019-03-06
      * @description 根据传入参数选择非select标签类下拉框
      */
-    public static void selectByVisibleText(WebElement element, String visibleText, String tagName) throws Exception {
+    public void selectByVisibleText(WebElement element, String visibleText, String tagName) throws Exception {
         List<WebElement> elementList = element.findElements(By.tagName(tagName));
         //增加等待元素展示
         log.info("elementList.size():" + elementList.size());
@@ -558,7 +569,7 @@ public class BaseComponent {
      * @author: zouxianshi
      * @description: 回车操作
      */
-    public static void actionEnter() {
+    public void actionEnter() {
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.ENTER).perform();
     }
@@ -570,7 +581,7 @@ public class BaseComponent {
      * @Param []
      * @Return void
      **/
-    public static void exit() {
+    public void exit() {
         ChromeDriverGenerator.quitDriver(driver);
     }
 
@@ -581,7 +592,7 @@ public class BaseComponent {
      * @Param []
      * @Return void
      **/
-    public static void screenShot() {
+    public void screenShot() {
         driver.switchTo().alert().getText();
         //执行屏幕截图操作
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -594,11 +605,10 @@ public class BaseComponent {
 
     }
 
-    public static String alert(){
+    public String alert() {
         log.info(driver.switchTo().alert().getText());
         return driver.switchTo().alert().getText();
     }
-
 
 
 }
