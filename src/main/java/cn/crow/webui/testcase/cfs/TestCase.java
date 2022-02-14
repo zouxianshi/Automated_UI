@@ -2,7 +2,6 @@ package cn.crow.webui.testcase.cfs;
 
 import cn.crow.webui.AW.cfs.Login;
 import cn.crow.webui.AW.cfs.TemplateNew;
-import cn.crow.webui.control.baseComponent.BaseComponent;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

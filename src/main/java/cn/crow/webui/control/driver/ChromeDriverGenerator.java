@@ -34,7 +34,7 @@ public class ChromeDriverGenerator {
                 System.setProperty(Constant.DRIVER_TYPE_CHROME, Constant.DRIVER_PATH_LINUX);
             }
             //设置Chrome静默模式
-//			options.addArguments(Constant.CHROME_SILENCE_MODE);
+			options.addArguments(Constant.CHROME_SILENCE_MODE);
             //最大化窗口
 			options.addArguments(Constant.CHROME_MAX_WINDOW);
             //设置忽略并能正常打开不安全的页面

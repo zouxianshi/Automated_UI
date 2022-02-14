@@ -2,12 +2,7 @@ package cn.crow.webui.AW.cfs;
 
 import cn.crow.webui.AW.cfs.constantPageObj.LoginObj;
 import cn.crow.webui.control.baseComponent.BaseComponent;
-import cn.crow.webui.control.baseComponent.ET;
-import cn.crow.webui.control.baseComponent.BaseComponent;
 import lombok.extern.log4j.Log4j2;
-
-import javax.swing.plaf.synth.SynthTextAreaUI;
-import java.util.Arrays;
 
 /**
  * 0
@@ -21,7 +16,7 @@ import java.util.Arrays;
 public class Login {
     static BaseComponent baseComponent = new BaseComponent();
 
-    public static void login(String username, String pwd) throws Exception {
+    public static void login(String username, String pwd) {
         try {
             log.info("开始登陆");
             baseComponent.getUrl("https://ucfs.med.gzhc365.com/merchant/#/login");

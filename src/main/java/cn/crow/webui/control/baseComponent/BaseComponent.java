@@ -3,6 +3,8 @@ package cn.crow.webui.control.baseComponent;
 import cn.crow.webui.control.driver.ChromeDriverGenerator;
 import junit.framework.Assert;
 
+import lombok.Data;
+import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -16,7 +18,17 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+
+@Data
+class
+Element {
+    WebElement element;
+}
+
 
 /**
  * @author : zouxianshi
@@ -24,20 +36,25 @@ import java.util.concurrent.TimeUnit;
  * @description: 基础控件管理类
  */
 @Log4j2
-public class BaseComponent extends Thread {
-
+public class BaseComponent implements Runnable {
     static WebDriver driver = ChromeDriverGenerator.getDriver();
     private ET type;
     private String value;
-    WebElement webElement;
+    static volatile WebElement element;
+    static volatile Element e;
+    static final Object lock = new Object();
+    ET[] etarr = ET.values();
+    private CountDownLatch startLatch;
+    private CountDownLatch latch;
 
-    public void tv(ET type, String value) {
-        this.type = type;
-        this.value = value;
+    public BaseComponent() {
     }
 
-    public void setWebElement(WebElement element){
-        this.webElement = element;
+    public BaseComponent(CountDownLatch startLatch, CountDownLatch latch,ET type, String value) {
+        this.type = type;
+        this.value = value;
+        this.startLatch = startLatch;
+        this.latch = latch;
     }
 
     /**
@@ -82,22 +99,47 @@ public class BaseComponent extends Thread {
 
 
     public WebElement findElement(String value) throws Exception {
-        ET[] etarr = ET.values();
+        CountDownLatch startLatch  = new CountDownLatch(1);
+        CountDownLatch latch  = new CountDownLatch(etarr.length);
+        ExecutorService executor = Executors.newFixedThreadPool(etarr.length);
         for (ET et : etarr) {
-            BaseComponent baseComponent = new BaseComponent();
-            baseComponent.tv(et, value);
-            Thread thread = new Thread(baseComponent);
-            thread.start();
+            executor.execute(new BaseComponent(startLatch,latch,et,value));
         }
-        return webElement;
+        startLatch.countDown();
+        System.out.println("aaa");
+        latch.await();
+        System.out.println("this.element的值为：" + element);
+        if (element != null) {
+            return element;
+        }
+        return null;
     }
 
     public void run() {
-        final By by = getBy(type, value);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
-        WebElement element = wait.until((ExpectedCondition<WebElement>) driver -> driver.findElement(by));
-        if (element != null){
-            setWebElement(element);
+        try {
+            startLatch.await();
+            if (element == null) {
+                WebElement element;
+                final By by = getBy(type, value);
+                log.info(type + ":" + value);
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constant.ELEMENT_WAIT_TIME));
+                element = wait.until((ExpectedCondition<WebElement>) driver -> driver.findElement(by));
+                log.info(element);
+                if (element != null) {
+                    BaseComponent.element = element;
+                    log.info("this.element的值1为：" + BaseComponent.element);
+                } else {
+                    log.info("查找元素失败");
+                }
+            } else {
+                synchronized (lock) {
+                    Thread.currentThread().interrupt();
+                    lock.wait();
+                }
+            }
+            latch.countDown();
+        } catch (Exception e) {
+            log.info(e);
         }
     }
 
@@ -609,6 +651,5 @@ public class BaseComponent extends Thread {
         log.info(driver.switchTo().alert().getText());
         return driver.switchTo().alert().getText();
     }
-
 
 }

@@ -7,13 +7,13 @@ package cn.crow.webui.AW.cfs.constantPageObj;
 
 public class LoginObj {
 
-//    用户名输入框
+    //用户名输入框
     public static final String userName_Xpath = "//*[@id=\"userName\"]";
 
-//    密码输入框
+    //密码输入框
     public static final String pwd_Xpath = "//*[@id=\"loginPassword\"]";
 
-//    验证码输入框
+    //验证码输入框
     public static final String valiCode_Xpath = "//*[@id=\"valiCode\"]";
 
     //登录按钮

@@ -52,7 +52,7 @@ public class Test {
                         if (open) {
                             System.out.println(getName() + "监听到");
                             flag = false;
-                            Thread.sleep(5000L);
+                            Thread.sleep(30000L);
                             flag = true;
                             System.out.println(getName() + "监听结束");
                             synchronized (lock) {
